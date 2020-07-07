@@ -92,6 +92,7 @@ def delete_frame_file(a):
         print(os.path.exists("frame"+str(i)+".jpg"))
         if os.path.exists("frame"+str(i)+".jpg") :
             os.remove("frame"+str(i)+".jpg")
+        i = i + 1
 
 
 def data_obtention(frame_nb):
