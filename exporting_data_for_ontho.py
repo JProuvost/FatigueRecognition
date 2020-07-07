@@ -13,6 +13,7 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.base import BaseEstimator, TransformerMixin
 from skimage.feature import hog
 import joblib
+from datetime import datetime
 
 os.chdir(os.getcwd())
 
@@ -95,6 +96,12 @@ def delete_frame_file(a):
         i = i + 1
 
 
+def save_data_csv_format(facial_measures):
+
+    key_generator = datetime.now()
+    key_formated = key_generator.strftime("%d-%m-%Y-%H-%M-%S")
+    np.savetxt('data_to_export/data'+key_formated+'.csv', facial_measures, delimiter=',')
+
 def data_obtention(frame_nb):
     print("ui2")
     #création de l'instance du détecteur de facial landmark sur le modèle ci-dessus ainsi que l'array pour les données obtenues
@@ -157,5 +164,5 @@ print("ui")
 a=frame_extraction_v()
 print(a)
 facial_measures=data_obtention(a)
-np.savetxt('data.csv', facial_measures, delimiter=',')
+save_data_csv_format(facial_measures)
 delete_frame_file(a)
