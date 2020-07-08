@@ -88,9 +88,6 @@ def frame_extraction_v():
 def delete_frame_file(a):
     i=0
     while (i<a):
-        print("here")
-        print(a)
-        print(os.path.exists("frame"+str(i)+".jpg"))
         if os.path.exists("frame"+str(i)+".jpg") :
             os.remove("frame"+str(i)+".jpg")
         i = i + 1
@@ -100,7 +97,7 @@ def save_data_csv_format(facial_measures):
 
     key_generator = datetime.now()
     key_formated = key_generator.strftime("%d-%m-%Y-%H-%M-%S")
-    np.savetxt('data_to_export/data'+key_formated+'.csv', facial_measures, delimiter=',')
+    np.savetxt('data_to_export/data_'+key_formated+'.csv', facial_measures, delimiter=',')
 
 def data_obtention(frame_nb):
     print("ui2")
