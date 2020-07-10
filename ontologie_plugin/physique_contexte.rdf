@@ -1,0 +1,1489 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model"
+     xml:base="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:fatigue_model="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasAECSMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasAECSMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasAPCVMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasAPCVMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlink">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkAmplitudeMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkAmplitudeMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkDurationMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkDurationMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkEnergyMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkEnergyMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkFrequencyMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkFrequencyMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlink"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEWVARMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEWVARMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadState"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeDirection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeDirection">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeDirectionMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeDirectionMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeDirection"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeSateMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeSateMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeState"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeState">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGAZEDISMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGAZEDISMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGazeSate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_measure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGazeSate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGazeSate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadPosisitionMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadPosisitionMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadState"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadState">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMeanEyeClosureMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMeanEyeClosureMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMeanSquareEyeClosureMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMeanSquareEyeClosureMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMicroSleep05SMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMicroSleep05SMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMicroSleep1sMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMicroSleep1sMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMouthState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMouthState">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasNoddingFrequencyMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasNoddingFrequencyMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadState"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPERSACMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPERSACMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGazeSate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPerclos70Measured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPerclos70Measured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPerclos80Measured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPerclos80Measured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeClosure"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasReactionTimeState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasReactionTimeState">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasFacial"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTimeMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTimeMeasure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTime"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTimeWindows -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTimeWindows">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTime"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasYawningFrequencyMeasured -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasYawningFrequencyMeasured">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMouthState"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#isInCurrentTimeWindows -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#isInCurrentTimeWindows">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasTime"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasAECSMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasAPCVMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkAmplitudeMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkDurationMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkEnergyMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasBlinkFrequencyMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeState_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadState_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEWVARMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeState_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Down -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Down">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Left -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Left">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Rigth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Rigth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Up -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Up">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeState_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasEyeDirectionMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeState_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeState_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PhysicalBasedFatigueMeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Physical_Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GazState_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasGAZEDISMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GazState_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GazState_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Center -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Center">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Left -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Left">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Rigth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Rigth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadState_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasHeadPosisitionMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadState_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadState_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMeanEyeClosureMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMeanSquareEyeClosureMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMicroSleep05SMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasMicroSleep1sMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MouthSate_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MouthSate_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MovementReaction_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MovementReaction_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadState_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasNoddingFrequencyMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GazState_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPERSACMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPerclos70Measured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasPerclos80Measured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PhysicalBasedFatigueMeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PhysicalBasedFatigueMeasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Physical_Measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Physical_Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Physical_Measure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PsychicalReaction_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PsychicalReaction_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Facial_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#VehicleResponse_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#VehicleResponse_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#VisualReaciton_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#VisualReaciton_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_High -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_High">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_Low -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_Low">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_Medium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_measure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MouthSate_measure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#hasYawningFrequencyMeasured"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#AECS_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_measure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#APCV_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkAmplitude_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_measure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkDuration_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkEnergy_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#BlinkFrequency_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Blink_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeClosure_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_measure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EWVAR_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_measure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Center"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Down"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Left"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Rigth"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeDirection_Up"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#EyeState_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GazState_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadState_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MouthSate_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#ReactionTimeState_measure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#FacialMeasureFatigueBased_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#GAZEDIS_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Center"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Left"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#HeadPosition_Rigth"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanEyeClosure_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MeanSquareEyeClosure_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep05s_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MicroSleep1s_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#MovementReaction_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PsychicalReaction_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#VehicleResponse_measure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#VisualReaciton_measure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#NoddingFrequency_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#PERSAC_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perclos70_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#Perlcos80_Medium"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_High"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_Low"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/simeon/ontologies/2020/5/fatigue_model#YawningFrequency_Medium"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
